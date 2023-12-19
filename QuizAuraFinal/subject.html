@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizAura/Quizes</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.quiztriviagames.com/wp-content/uploads/2021/06/cropped-favicon-Quiz-trivia-games-1.png"
+      type="image/x-icon"
+    />
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: radial-gradient(circle at 51% 93%,#39dafd,#1f8ffb 69%);
+}
+nav{
+    background-color: rgb(82, 212, 251);
+    display: flex;
+    justify-content: space-between;
+}
+.head {
+    display: flex;
+}
+nav div a{
+    cursor: pointer;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: auto ;
+    margin-right: 4rem;
+}
+nav ul li{
+    
+    padding: 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+nav ul li a:hover{
+    color: blue;
+    font-weight: bold;
+}
+.hamBurger{
+    display: none;
+}
+.responsive .notHome{
+    display: block;
+}
+@media screen and (max-width:700px){
+    .hamBurger{
+        display: inline;
+        position: absolute;
+        right: 0;
+    }
+    .notHome{
+        display: none;
+    }
+    nav.responsive ul{
+        display: flex;
+        flex-direction: column;
+    }    
+
+}
+
+h1{
+    
+    text-align: center;
+    color: rgb(32, 97, 154);
+    
+    padding: 1.2rem;
+    font-weight:700;
+    font-size: 2rem;
+}
+#logo{
+    height: 10vh;
+}
+#logoBox{
+    margin-left: 2rem;
+    margin-top:  2rem;
+    display: flex;
+    
+}
+
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-learning-reading-knowledge-accumulation-background-template-image_193558.jpg'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f4f4f4; 
+        }
+
+        main {
+            padding: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+        }
+
+        .subject-card {
+            background-color: #fff;
+            height: 20rem;
+            width: 20rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(25% - 2em); /* 25% of the container width with some margin */
+            margin: 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+         .subject-design{
+            height: 80%;
+            width: 40%;
+            padding-left: 0.1rem;
+         }
+        .subject-image1{
+            height: 30rem;
+            width: 39rem;
+            border-radius: 1rem;
+         }
+         .subject-image2{
+            height: 30rem;
+            width: 40rem;
+            border-radius: 1rem;
+         }
+        .subject-card:hover {
+            transform: scale(1.05);
+        }
+
+        .subject-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .subject-info {
+            padding: 1em;
+        }
+
+        .subject-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        .subject-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .subject-card {
+                width: calc(50% - 2em); /* 50% of the container width with some margin */
+            }
+            
+          
+        .subject-image1{
+            padding: 1rem;
+            height: 17rem;
+            width: 20rem; 
+            border-radius: 1rem;
+         }
+         .subject-image2{
+            height: 17rem;
+            width: 20rem;
+            border-radius: 1rem;
+         }
+        }
+
+        @media (max-width: 480px) {
+            .subject-card {
+                width: calc(100% - 2em); /* 100% of the container width with some margin */
+            }
+            .subject-design{
+            height: 80%;
+            width: 40%;
+         }
+        .subject-image1{
+            height: 15rem;
+            padding: 1rem;
+            width: 15rem;
+            width: calc(100% - 2em);
+            border-radius: 1rem;
+         }
+         .subject-image2{
+            height: 15rem;
+            width: 15rem;
+            width: calc(100% - 2em);
+            border-radius: 1rem;
+         }
+        }
+.subject-title a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.subject-description{
+    font-size: 1.1rem;
+}
+</style>
+</head>
+<body>
+    <nav id="navBar" >
+        <div class="head">
+            <a href="home.php"><img id="logo" src="logo.png" alt="logo" /></a>
+            <!-- <h1 >QuizAura</h1> -->
+        </div>
+        <ul>
+            <li><a href="home.php">Home</a></li>
+            <li class="notHome"><a href="#">Quizes</a></li>
+            <li class="notHome"><a href="contactUs.html">Contact Us</a></li>
+            <li class="notHome"><a href="signup.php">Login</a></li>
+            <li class="notHome"><a href="help.html">Help</a></li>
+            <li class="hamBurger"><a href="javascript:void(0)" onclick="toggleNav()">&#9776;</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+      
+       
+            <div class="subject-design">
+            <img src="https://img.freepik.com/free-vector/colorful-education-concept-with-flat-design_23-2147898685.jpg?w=1060&t=st=1699863366~exp=1699863966~hmac=4237d225a8f45f688dc9f7b9f94d63238c2f1b83a477ddd7605926c8a05c60b4" alt="engineer branch" class="subject-image1">
+          
+            </div>
+        
+
+      
+            <div class="subject-design">
+            <img src="https://img.freepik.com/free-vector/isometric-school-education-design-concept-with-set-square-compositions_1284-62816.jpg?w=1800&t=st=1699863559~exp=1699864159~hmac=3dc01a5a00a1af140804482247ebf3b1510c6a296a6f17072363e2717836dcd5" alt="Subject 2" class="subject-image2">
+            </div>
+        
+        <!-- Subject Card 1 -->
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18140.jpg?w=1800&t=st=1699859273~exp=1699859873~hmac=482cbfa2666ee924b36f123253fe5b23a6d5e96fa61e0ae9bafff2d198111708" alt="Subject 1" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="dsa.php">Data Structure and Algorithm</a></div>
+                <div class="subject-description">Data Structures and Algorithms is a fundamental subject in computer science that focuses on the organization and manipulation of data and the design of efficient algorithms for problem-solving.</div>
+            </div>
+        </div>
+
+        <!-- Subject Card 2 -->
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-photo/database-computer-system-digital-storage-concept_53876-123742.jpg?w=2000&t=st=1699860036~exp=1699860636~hmac=7fe1e431ac86d90a46916094d54ed8b17eb2752b81e9277f0c785e3f06d184d6" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="dbms.php">DBMS</a></div>
+                <div class="subject-description">Database Management Systems (DBMS) is a subject that focuses on the principles and practices of efficiently storing, managing, and retrieving data. </div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-photo/application-programming-interface-hologram_23-2149092253.jpg?w=1800&t=st=1699865419~exp=1699866019~hmac=cf7f6f2804e1c13710d7079d648798385f08aeee9f68c13caffb705ab6bf7685 alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="os.php">Operating Systems</a></div>
+                <div class="subject-description">Operating Systems (OS) is a fundamental subject in computer science that focuses on the management and coordination of hardware and software resources to facilitate the execution of computer programs. </div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-photo/laptop-which-there-is-world-people-drawn_1232-288.jpg?w=1800&t=st=1699865568~exp=1699866168~hmac=d4205910a07c891c18d2edcfb7a17147ac09f21cb5277fd385d9235e4210814a" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="cn.php">Computer Networks</a></div>
+                <div class="subject-description">Computer Networks is a subject that focuses on the study of interconnected computer systems, enabling communication and data exchange between devices.</div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-vector/illustration-with-multitasking-concept_23-2148408832.jpg?w=1800&t=st=1699865764~exp=1699866364~hmac=ce409c6b47718fff8c5975d073ac1a9953cc1901de10087ccde884fd5468dadf" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="oops.php">OOPs</a></div>
+                <div class="subject-description">Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes for organizing code. It focuses on designing and structuring code in a way that mirrors real-world entities and their interactions</div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?w=1800&t=st=1699866001~exp=1699866601~hmac=0a453f3ab08170f7dfe2cedb3dc0fc3332b6c214707747fa6677ef5270ff2d54" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="wd.php">Web Development</a></div>
+                <div class="subject-description">Web Development is a broad field that involves creating and maintaining websites. It encompasses a range of technologies and skills to build and deploy interactive and dynamic content on the World Wide Web.</div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=2000&t=st=1699867083~exp=1699867683~hmac=84a71aa7de0753972bd851ee2589a236f2ba83e6893ef333ba6f0ed84791be82" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="ai.php">Artificial Intelligence</a></div>
+                <div class="subject-description">Artificial Intelligence is a multidisciplinary field that focuses on creating intelligent machines capable of performing tasks that typically require human intelligence. </div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-vector/robotic-process-automation-illustration_23-2149227347.jpg?w=1060&t=st=1699867291~exp=1699867891~hmac=1b7ca75a7aece8cb3028dd7ec6585d7f0396c01b32513a944acda0bd4fd3e1e2" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="ml.php">Machine Learning</a></div>
+                <div class="subject-description">Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to learn and improve their performance. </div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-vector/graphic-designer-workspace-concept_1284-18695.jpg?w=1380&t=st=1699867467~exp=1699868067~hmac=64521b2fcc98383cea1c25f3729538aadbe757ab8d049349b0310ad777e4f573" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="cg.php">Computer Graphics</a></div>
+                <div class="subject-description">Computer Graphics is a field of study that involves the creation, manipulation, and representation of visual images and animations using computers.</div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/premium-vector/programmers-concept-with-flat-design_23-2147854276.jpg" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="cd.php">Compiler Design</a></div>
+                <div class="subject-description">Compiler Design is a specialized field in computer science that focuses on the creation of compilers, which are essential tools in software development.</div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-photo/woman-scrolling-laptop_53876-167050.jpg?w=1380&t=st=1699867804~exp=1699868404~hmac=74c8df6ff67f8bd876e3313ed286233a22aada1c86fd0ee3745c0d97d38ef4f7" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="cc.php">Cloud Computing</a></div>
+                <div class="subject-description">Cloud Computing is a technology that provides on-demand access to a shared pool of computing resources over the internet.</div>
+            </div>
+        </div>
+
+        <div class="subject-card">
+            <img src="https://img.freepik.com/free-vector/big-data-science-analysis-isometric-composition_1284-54449.jpg?w=1480&t=st=1699867939~exp=1699868539~hmac=68880fd2d95e08eaab855906e662cdf49195f29faeddcfa20a4088d520b7d715" alt="Subject 2" class="subject-image">
+            <div class="subject-info">
+                <div class="subject-title"><a href="dmaw.php">Data Mining and Warehousing</a></div>
+                <div class="subject-description">Data Mining is the process of discovering patterns, correlations, and meaningful information from large datasets. It involves using various techniques, including statistical analysis, machine learning, and pattern recognition.</div>
+            </div>
+        </div>
+        
+        <!-- Add more subject cards as needed -->
+
+    </main>
+
+
+<script>
+        function toggleNav(){
+    let navBar = document.getElementById('navBar');
+
+    if(navBar.className === '')
+        navBar.className = 'responsive';
+    else
+        navBar.className = '';
+}
+</script>
+    
+</body>
+</html>
